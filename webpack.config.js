@@ -5,22 +5,22 @@ module.exports = {
   // This is the entry point or start of our react applicaton
   entry: "./app/app.js",
 
-  // plugins:[
-  //   new webpack.DefinePlugin({
-  //     'process.env.NODE_ENV': JSON.stringify('production')
-  //   })
-  // ],
+  plugins:[
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production')
+    })
+  ],
 
   // configures dotenv-webpack
-  plugins: [
-      new Dotenv({
-          path: './.env',
-          //grabs env var
-          systemvars: true,
-          //uses dotenv-safe, loads .env.example
-          safe: true
-      })
-  ],
+  // plugins: [
+  //     new Dotenv({
+  //         path: './.env',
+  //         //grabs env var
+  //         systemvars: true,
+  //         //uses dotenv-safe, loads .env.example
+  //         safe: true
+  //     })
+  // ],
   // The plain compiled JavaScript will be output into this file
   output: {
     filename: "public/bundle.js"
