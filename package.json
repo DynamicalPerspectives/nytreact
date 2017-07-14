@@ -1,0 +1,33 @@
+{
+  "name": "nytreact",
+  "version": "1.0.0",
+  "description": "Week 19 Homework",
+  "main": "mongoConfig.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DynamicalPerspectives/nytreact.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DynamicalPerspectives/nytreact/issues"
+  },
+  "homepage": "https://github.com/DynamicalPerspectives/nytreact#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "bulma": "^0.4.3",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3",
+    "mongoose": "^4.11.2",
+    "path": "^0.12.7",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "webpack": "^3.2.0"
+  },
+  "devDependencies": {}
+}
