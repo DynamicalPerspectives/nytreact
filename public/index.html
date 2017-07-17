@@ -3,15 +3,50 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>LearnReact!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>NYT React Project</title>
 
-	<!-- Here we include bootstrap. This will be made available to all of the generated HTML/JS that React generates-->
+	<!-- Here we include the css framework This will be made available to all of the generated HTML/JS that React generates-->
+	<!--  Note to self:  Using bulma;  see http://bulma.io/ and see https://medium.com/@thomasmarciniak/top-css-frameworks-to-follow-in-2017-51d283dd00fb-->
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.min.css">
+	<!-- Remember to install bulma - npm install bulma -->
+	<!-- Note: Bulma docs say to use font-awesome if you want to use icons with Bulma -->
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link rel="stylesheet" href="app.css">
 </head>
 
 <body>
+
+	<!-- <div class="columns">
+		<section class="hero is-primary column is-12">
+			<div class="hero-body">
+				<div class="container">
+					<h1 class="title">New York Times Article Finder
+						{this.props.primaryTitle}
+					</h1>
+					<h2 className="subtitle">Project Using React.js
+						{this.props.primarySub}
+					</h2>
+				</div>
+			</div>
+		</section>
+	</div> -->
+
+	<div className="columns">
+		<section className="hero is-primary column is-12">
+			<div className="hero-body">
+				<div className="container">
+					<h1 className="title">
+						{this.props.primaryTitle}
+					</h1>
+					<h2 className="subtitle">
+						{this.props.primarySub}
+					</h2>
+				</div>
+			</div>
+		</section>
+</div>
 
 	<!-- This is where React will deploy the contents it generates -->
 	<div id="app"></div>

@@ -22,6 +22,10 @@ mongoose.Promise = Promise;
 // isolate mongo configuration and heroku info
 let db = require("./mongoConfig");
 db = mongoose.connection;
+
+// Use next  line  to dropDatabase to clear db
+// db.dropDatabase();
+
 db.on("error", console.error.bind(console, "connection error:"));
 db.once("open", function() {
   console.log("Mongoose connection successful.");
@@ -44,7 +48,7 @@ app.listen(PORT, function() {
 
 
 
-//
+//Other attempts
 //
 // var logger - require("morgan");
 //

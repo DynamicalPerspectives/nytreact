@@ -32,21 +32,21 @@ export default class Result extends React.Component {
   render() {
     return (
     <div>
-    <div className="columns">
-    <div className="column">
-      <nav className="panel column is-8 is-offset-2">
-        <p className="panel-heading has-text-centered">
-          {this.props.headerName}
-        </p>
-        <div className={this.props.resultsFound.length > 0 ? "scrollIt": ""}>
-        {
-          this.props.resultsFound.map((doc,index) => {
+      <div className="columns">
+        <div className="column">
+          <nav className="panel column is-8 is-offset-2">
+            <p className="panel-heading has-text-centered">
+              {this.props.headerName}
+            </p>
+            <div className={this.props.resultsFound.length > 0 ? "scrollIt": ""}>
+              {
+                this.props.resultsFound.map((doc,index) => {
 
-            let header = doc.abstract;
-            let formDate = doc.pub_date.split("T")[0];
-            return <QueryItem key={index} buttonEvent={this.saveArticle} articleId={doc._id} newsLink={doc.web_url} abstract={doc.headline.main} snippet={doc.snippet} articleDate={formDate} icon="fa fa-floppy-o" />
-          })
-        }
+                  let header = doc.abstract;
+                  let formDate = doc.pub_date.split("T")[0];
+                  return <QueryItem key={index} buttonEvent={this.saveArticle} articleId={doc._id} newsLink={doc.web_url} abstract={doc.headline.main} snippet={doc.snippet} articleDate={formDate} icon="fa fa-floppy-o" />
+                })
+              }
       </div>
     </nav>
   </div>

@@ -1,7 +1,5 @@
 var mongoose = require("mongoose");
 
-// module.exports = mongoose.connect(process.env.MONGODB_URI,{useMongoClient: true});
-
 // Note to self:  See http://mongoosejs.com/docs/connections.html#use-mongo-client re: deprecation warning from terminal. . .here are the connect examples from docs:
 // // Using `mongoose.connect`...
 // var promise = mongoose.connect('mongodb://localhost/myapp', {
@@ -20,11 +18,16 @@ var mongoose = require("mongoose");
 // connection.openUri('mongodb://localhost/myapp', { /* options */ });
 
 
-
 module.exports = mongoose.connect(process.env.MONGODB_URI || ("mongodb://heroku_q704sxx4:ifgiglkhn5je05sm3v3nt3othn@ds157342.mlab.com:57342/heroku_q704sxx4"), {useMongoClient: true});
 
 
 
+ // mongoose.connect('mongodb://localhost/mydatabase',function(){
+//     /* Drop the DB */
+//     mongoose.connection.db.dropDatabase();
+// });
+
+// Note to self: Other attempts and notes.
 // mongoose.connect(process.env.MONGODB_URI || "mongodb://heroku_q704sxx4:ifgiglkhn5je05sm3v3nt3othn@ds157342.mlab.com:57342/heroku_q704sxx4")
 
 // var db = process.env.MONGODB_URI || "mongodb://heroku_q704sxx4:ifgiglkhn5je05sm3v3nt3othn@ds157342.mlab.com:57342/heroku_q704sxx4")

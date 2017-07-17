@@ -68,22 +68,22 @@ export default class SearchList extends React.Component {
   render() {
     return (
       <div>
-    <div className="columns">
-      <nav className="panel column is-8 is-offset-2">
-        <p className="panel-heading has-text-centered">
-          {this.props.headerName}
-        </p>
-        <div className="panel-block">
-            <input id="topic" className="input is-small" type="text" onChange={this.changeField} placeholder="Topic" />
-        </div>
-        <div className="panel-block">
-          <input id="beginDate" className="input is-small" type="text" onChange={this.changeField} placeholder="Start Year" />
-        </div>
-        <div className="panel-block">
-        <input id="endDate" className="input is-small" type="text" onChange={this.changeField} placeholder="End Year" />
-      </div>
-      <div className="panel-block">
-      <a className="button is-success is-hovered" onClick={this.searchNyt}>Search</a>
+        <div className="columns">
+          <nav className="panel column is-8 is-offset-2">
+            <p className="panel-heading has-text-centered">
+              {this.props.headerName}
+            </p>
+            <div className="panel-block">
+              <input id="topic" className="input is-small" type="text" onChange={this.changeField} placeholder="Topic" />
+            </div>
+            <div className="panel-block">
+              <input id="beginDate" className="input is-small" type="text" onChange={this.changeField} placeholder="Start Year" />
+            </div>
+            <div className="panel-block">
+              <input id="endDate" className="input is-small" type="text" onChange={this.changeField} placeholder="End Year (Optional)" />
+            </div>
+            <div className="panel-block">
+              <a className="button is-primary is-hovered" onClick={this.searchNyt}>Search</a>
     </div>
     </nav>
   </div>

@@ -1,10 +1,11 @@
+
 import React from "react";
 
 export default class Header extends React.Component {
   render() {
     return (
       <div className="columns">
-        <section className="hero is-dark column is-12">
+        <section className="hero is-primary column is-12">
           <div className="hero-body">
             <div className="container">
               <h1 className="title">
@@ -16,7 +17,7 @@ export default class Header extends React.Component {
             </div>
           </div>
         </section>
-    </div>
+      </div>
     );
   }
 }
